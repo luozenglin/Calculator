@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dip"
+        android:background="@drawable/screen_bg"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="12dip" >
+
+        <TextView
+            android:id="@+id/show_result_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:textColor="#1B1D20"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/show_input_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:textColor="#1B1D20"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5">
+
+        <Button
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:text="C" />
+
+        <Button
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:text="+"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="1"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="2"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="3"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="-"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="4"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="5"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="6"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="*"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="7"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="8"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="9"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="2"
+            android:text="="/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="."/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="0"/>
+
+        <Button
+            android:layout_columnWeight="1"
+            android:text="/"/>
+    </GridLayout>
+</LinearLayout>
