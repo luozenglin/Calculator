@@ -257,7 +257,7 @@ public class StandardCalculator {
     }
 
 
-    protected boolean isInitInputList() {
+    protected boolean isInitInputList() {         //判断是否是初始状态
         if(inputList.size()==1 && inputList.get(0).getValue().equals(map.get(zeroBtn))){
             return true;
         }
@@ -327,7 +327,7 @@ public class StandardCalculator {
     }
 
     protected void inputNum(String num) {
-        initEndStatus();
+        initEndStatus();           //处理上次运算结束的情况
         if(getLastInputItem().getType()== InputItem.TYPE.OPE_NUM){
             inputOpe(mulBtn);
         }
@@ -366,14 +366,13 @@ public class StandardCalculator {
     }
 
     protected void getResult(View view) {
-        Calculate calculate = new Calculate();
         if (showInputTv.getText().charAt(showInputTv.length() - 1) != '=') {
             addTV(view);
         }
         String res = "";
         try{
-            res = Calculate.getResult(inputList,activity);    //
-            resultManage(res);
+            res = Calculate.getResult(inputList,activity);    //取得计算结果
+            resultManage(res);       //处理界面显示信息
         }catch (ArithmeticException e){
             res = "0不能做除数！";
             Toast.makeText(activity,res,Toast.LENGTH_SHORT).show();

@@ -72,7 +72,7 @@ public class Calculate {
         return dealWithResult(numberStack.pop());
     }
 
-    protected static String dealWithResult(String result){
+    protected static String dealWithResult(String result){           //修正浮点计算带来的误差
         String res = String.format("%.12f",Double.parseDouble(result));
         for(int i = res.length()-1;i>0;i--){
             if(res.charAt(i)=='.'){
@@ -89,7 +89,7 @@ public class Calculate {
         return res;
     }
 
-    protected static void processAnOperator(Stack<String> numberStack, Stack<String> operatorStack,
+    protected static void processAnOperator(Stack<String> numberStack, Stack<String> operatorStack,   //求值
                                             Context context) throws ArithmeticException {
         String ope = operatorStack.pop();
         Log.i("Calculate", "operator: " + numberStack.peek() + ope);
@@ -142,7 +142,7 @@ public class Calculate {
         Log.i("Calculate", "processAnOperator result: " + numberStack.peek());
     }
 
-    protected static List<InputItem> preconditioning(List<InputItem> inputItemList) {
+    protected static List<InputItem> preconditioning(List<InputItem> inputItemList) {     //将用户输入结果转换为表达式，即数字字符合并为数字
         List<InputItem> list = new ArrayList<>();
         String numberString = "";
         for (InputItem inputItem : inputItemList) {
